@@ -15,16 +15,21 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
 
+  console.log("Successfully connected to game server");
+
   conn.on('data', function(data) {
-    console.log("you ded cuz you idled", data);
-  })
+    console.log("you ded cuz you idled");
+ 
+    })
+
+    conn.on('connect', () => {
+      conn.write('Name: GUS');
+    });
 
   return conn;
 
   
 }
 
-console.log('Connecting ...');
-connect();
+module.exports = {connect}; 
 
-module.exports = connect
