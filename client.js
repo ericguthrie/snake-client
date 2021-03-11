@@ -26,58 +26,13 @@ const connect = function() {
       conn.write('Name: GUS');
     });
 
-//     conn.on('connect', () => {
-//       conn.write('Move: down');
-
-// });
-
-// setTimeout(() => {
-//   conn.write('Move: right');
-// }, 200);
-
-// setTimeout(() => {
-//   conn.write('Move: right');
-// }, 400);
-
-// setTimeout(() => {
-//   conn.write('Move: right');
-// }, 600);
-
-// setTimeout(() => {
-//   conn.write('Move: right');
-// }, 800);
-
-// setTimeout(() => {
-//   conn.write('Move: right');
-// }, 1000);
-
-// setTimeout(() => {
-//   conn.write('Move: right');
-// }, 1200);
-
-// setTimeout(() => {
-//   conn.write('Move: right');
-// }, 1400);
-
-// setTimeout(() => {
-//   conn.write('Move: right');
-// }, 1600);
-
-// setTimeout(() => {
-//   conn.write('Move: right');
-// }, 1800);
-
-// setTimeout(() => {
-//   conn.write('Move: right');
-// }, 2000);
-
-// setTimeout(() => {
-//   conn.write('Move: right');
-// }, 2200);
-
-// setTimeout(() => {
-//   conn.write('Move: right');
-// }, 2400);
+    const setupInput = function() {
+      const stdin = process.stdin;
+      stdin.setRawMode(true);
+      stdin.setEncoding('utf8');
+      stdin.resume();
+      return stdin;
+    }
 
 
 
